@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr" prefix="og: https://ogp.me/ns#">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17951482426"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17951482426');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GZ Toiture | Couvreur Charente-Maritime (17) — Couverture, Charpente, Zinguerie</title>
@@ -54,43 +62,30 @@ button{cursor:pointer;font-family:inherit}
 /* ── NAV — ZERO OVERLAP ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:900;height:68px;display:flex;align-items:center;padding:0 24px;gap:16px;transition:background .3s,box-shadow .3s}
 nav.solid{background:rgba(250,250,247,.98);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.07)}
-/* Logo: flex-shrink:0, margin-right:auto pousse tout le reste à droite */
 .n-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;margin-right:auto}
 .n-logo img{width:40px;height:40px;object-fit:contain;border-radius:8px;flex-shrink:0}
 .n-logo-text{display:flex;flex-direction:column;line-height:1}
 .n-name{font-family:var(--fh);font-size:1rem;font-weight:800;color:var(--g800);white-space:nowrap}
 .n-sub{font-size:.48rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase;margin-top:3px;white-space:nowrap}
-/* Liens: par défaut cachés, visibles > 900px */
 .n-links{display:none;gap:22px}
 .n-links a{font-size:.83rem;font-weight:500;color:var(--ink2);position:relative;padding-bottom:3px;transition:color .2s;white-space:nowrap;text-decoration:none}
 .n-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--g800);border-radius:2px;transition:width .3s}
 .n-links a:hover{color:var(--g800)}.n-links a:hover::after{width:100%}
-/* Actions: toujours à droite */
 .n-acts{display:flex;gap:8px;align-items:center;flex-shrink:0}
-/* Bouton urgence: caché par défaut */
 .n-urg{display:none;background:var(--red);color:#fff;padding:6px 12px;border-radius:8px;font-size:.7rem;font-weight:700;text-transform:uppercase;animation:pulse 2.5s infinite;white-space:nowrap;text-decoration:none}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(217,48,37,.3)}60%{box-shadow:0 0 0 8px rgba(217,48,37,0)}}
-/* Bouton appel: toujours visible */
 .n-call{background:var(--g800);color:#fff;padding:9px 16px;border-radius:10px;font-weight:700;font-size:.86rem;display:flex;align-items:center;gap:6px;transition:all .25s;white-space:nowrap;text-decoration:none;flex-shrink:0}
 .n-call:hover{background:var(--g700)}
-.cn{} /* numéro — géré par media query */
-/* Hamburger: caché par défaut */
+.cn{}
 .n-ham{display:none;flex-direction:column;gap:5px;padding:8px;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent;flex-shrink:0}
 .n-ham span{width:22px;height:2px;background:var(--g800);border-radius:2px;transition:all .3s;display:block}
 .n-ham.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
 .n-ham.open span:nth-child(2){opacity:0}
 .n-ham.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
-/* ── RÈGLES MEDIA NAV ──
-   > 1200px : liens + urgence + appel complet
-   900-1200 : liens + appel complet (sans urgence)
-   600-900  : hamburger + appel complet (sans liens)
-   < 600    : hamburger + appel icône seule
-*/
 @media(min-width:1200px){.n-urg{display:flex;align-items:center}}
 @media(min-width:900px){.n-links{display:flex}}
 @media(max-width:899px){.n-ham{display:flex}}
 @media(max-width:599px){.cn{display:none}.n-call{padding:9px 12px}}
-/* Menu mobile */
 .mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;z-index:899;padding:8px 20px 20px;box-shadow:0 8px 24px rgba(0,0,0,.1);flex-direction:column;border-top:1px solid var(--cream2)}
 .mob-menu.open{display:flex}
 .mob-menu a{display:block;padding:14px 4px;font-size:1rem;font-weight:600;color:var(--ink);border-bottom:1px solid var(--cream2);text-decoration:none;-webkit-tap-highlight-color:transparent}
@@ -112,7 +107,6 @@ h1.hero-h1 .hl{color:var(--g800)}
 .hero-badges{display:flex;flex-wrap:wrap;gap:12px}
 .hb{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--muted);font-weight:500}
 .hb-dot{width:6px;height:6px;background:var(--g800);border-radius:50%;flex-shrink:0}
-/* Hero right — dark photo panel */
 .hero-r{position:relative;overflow:hidden;background:var(--g900);display:flex;flex-direction:column;justify-content:center;padding:72px 48px}
 .hero-r-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
 .hero-r-ov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(26,61,43,.78),rgba(26,61,43,.62) 55%,rgba(26,61,43,.82));z-index:1}
@@ -267,13 +261,11 @@ h2.co-h2{font-family:var(--fh);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;
 #preuves{background:var(--white);padding:0 0 72px}
 .ba-head{padding:72px 40px 40px;max-width:1280px;margin:0 auto;text-align:center}
 .ba-layout{display:grid;grid-template-columns:1fr 360px;max-width:1280px;margin:0 auto;padding:0 40px;gap:18px;align-items:start;box-sizing:border-box}
-/* Comparateur */
 .ba-wrap{border-radius:var(--r2);overflow:hidden;box-shadow:var(--sh2);position:relative}
 .ba-labels{position:absolute;top:16px;left:0;right:0;display:flex;justify-content:space-between;padding:0 20px;z-index:10;pointer-events:none}
 .ba-lb,.ba-la{color:#fff;padding:5px 14px;border-radius:100px;font-size:.72rem;font-weight:800;letter-spacing:.1em;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15)}
 .ba-lb{background:rgba(0,0,0,.5)}
 .ba-la{background:rgba(26,61,43,.75);border-color:rgba(91,168,133,.3)}
-/* THE SLIDER — single container, no figure needed */
 .ba-slider{position:relative;width:100%;height:clamp(240px,42vw,480px);overflow:hidden;background:#111;cursor:ew-resize;user-select:none;-webkit-user-select:none;touch-action:pan-y;border-radius:var(--r2) var(--r2) 0 0}
 .ba-slider img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
 .ba-img-after{z-index:1}
@@ -286,7 +278,6 @@ h2.co-h2{font-family:var(--fh);font-size:clamp(1.8rem,4vw,3rem);font-weight:800;
 .ba-caption{background:var(--cream);border:1.5px solid var(--cream2);border-radius:0 0 var(--r2) var(--r2);padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ba-cap-t{font-family:var(--fh);font-size:1.05rem;font-weight:800;color:var(--g900);margin-bottom:3px}
 .ba-cap-s{font-size:.8rem;color:var(--muted)}
-/* Side photos */
 .ba-side{display:flex;flex-direction:column;gap:14px}
 .ba-photo{position:relative;border-radius:var(--r2);overflow:hidden;aspect-ratio:4/3}
 .ba-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
@@ -314,7 +305,6 @@ h3.csl-title{font-family:var(--fh);font-size:1.15rem;font-weight:800;color:var(-
 .csl-txt{font-size:.81rem;color:var(--muted);line-height:1.7;flex:1}
 .csl-link{font-size:.8rem;font-weight:700;color:var(--g800);display:inline-flex;align-items:center;gap:4px;transition:gap .2s;margin-top:4px}
 .csl-link:hover{gap:8px}
-/* Mini articles */
 .csl-stack{display:flex;flex-direction:column;gap:18px}
 .csl-mini{background:var(--white);border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--cream2);display:grid;grid-template-columns:130px 1fr;transition:all .3s}
 .csl-mini:hover{box-shadow:var(--sh2);border-color:var(--g100);transform:translateX(4px)}
@@ -457,7 +447,6 @@ footer{background:var(--g900);padding:56px 40px 28px}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
 
 /* ════════════ RESPONSIVE ════════════ */
-
 @media(max-width:1100px){
   .hero-grid,.contact-grid{grid-template-columns:1fr}
   .hero-r{min-height:320px;padding:40px 36px}
@@ -479,23 +468,19 @@ footer{background:var(--g900);padding:56px 40px 28px}
   body{padding-bottom:calc(78px + env(safe-area-inset-bottom))}
   .wa{display:none}
   .mob-bar{display:flex}
-  /* Hero */
   .hero-grid{grid-template-columns:1fr}
   .hero-r{display:none!important}
   .hero-l{padding:80px 20px 52px}
   h1.hero-h1{font-size:clamp(2.2rem,10vw,3.2rem)}
   .hero-ctas{flex-direction:column;gap:9px}
   .btn-p,.btn-s{width:100%;justify-content:center;padding:14px 20px}
-  /* Section padding */
   .sec{padding:56px 20px}
   #trust,#tarifs,#temo,#faq,#seo-villes,#coastal,#real,#zone,#contact,#conseils{padding-left:20px!important;padding-right:20px!important;padding-top:56px!important;padding-bottom:56px!important}
   #services .sv-intro{padding:56px 20px 0!important}
-  /* Grids */
   .trust-grid,.tar-grid,.tem-grid,.co-row{grid-template-columns:1fr}
   .ft{grid-template-columns:1fr!important;gap:28px}
   .contact-grid,.zone-grid,.co-grid{grid-template-columns:1fr!important;gap:28px}
   .fg-row{grid-template-columns:1fr}
-  /* Avant/après — fix overflow mobile */
   .ba-head{padding:56px 20px 32px}
   .ba-layout{padding:0 20px!important;grid-template-columns:1fr!important;gap:14px}
   .ba-wrap{max-width:100%;overflow:hidden}
@@ -503,28 +488,20 @@ footer{background:var(--g900);padding:56px 40px 28px}
   .ba-caption{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
   .ba-side{flex-direction:column!important;gap:10px}
   .ba-photo{aspect-ratio:16/9}
-  /* Conseils */
   .csl-head{grid-template-columns:1fr;gap:12px}
   .csl-grid{grid-template-columns:1fr}
   .csl-mini{grid-template-columns:95px 1fr}
   .csl-mini-img{min-height:95px}
-  /* Gallery */
   .gal-head{flex-direction:column;align-items:flex-start;gap:12px}
   .gal-filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .gal-filters::-webkit-scrollbar{display:none}
-  /* SEO */
   .seo-grid{grid-template-columns:repeat(2,1fr)!important;gap:7px}
   .spill{padding:11px 7px}
-  /* Zone */
   .zone-form{flex-direction:column}
-  /* FAQ */
   .faq-inner{padding:0}
-  /* Footer */
   footer{padding:44px 20px 24px!important}
   .ft-bot{flex-direction:column;align-items:flex-start}
-  /* Form */
   .cf{padding:22px 16px}
-  /* Headings */
   h2.h2{font-size:clamp(1.6rem,7.5vw,2.2rem)!important}
 }
 @media(max-width:400px){
@@ -785,7 +762,6 @@ footer{background:var(--g900);padding:56px 40px 28px}
     <p class="sub" style="margin:0 auto;text-align:center">Glissez le curseur pour comparer. Chantiers réels Charente-Maritime.</p>
   </div>
   <div class="ba-layout">
-    <!-- Comparateur principal -->
     <div class="ba-wrap r">
       <div class="ba-labels" aria-hidden="true">
         <span class="ba-lb">AVANT</span>
@@ -806,7 +782,6 @@ footer{background:var(--g900);padding:56px 40px 28px}
         <a href="#contact" class="btn-sv" style="flex-shrink:0">Même résultat chez vous</a>
       </div>
     </div>
-    <!-- Photos côte à côte -->
     <div class="ba-side">
       <div class="ba-photo r">
         <img src="https://i.ibb.co/9kPKH78Z/IMG-1832.jpg" alt="Rénovation toiture après incendie GZ Toiture" loading="lazy">
@@ -1192,7 +1167,6 @@ buildGal('all');
 
   function setPos(pct) {
     pct = Math.max(0, Math.min(100, pct));
-    const px = (pct / 100 * slider.offsetWidth);
     divider.style.left  = pct + '%';
     knob.style.left     = pct + '%';
     imgBefore.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
@@ -1204,16 +1178,13 @@ buildGal('all');
     return ((clientX - rect.left) / rect.width) * 100;
   }
 
-  /* Range input */
   range.addEventListener('input', () => setPos(+range.value));
 
-  /* Mouse drag */
   let dragging = false;
   slider.addEventListener('mousedown', e => { dragging = true; setPos(getPct(e.clientX)); e.preventDefault(); });
   window.addEventListener('mousemove', e => { if (dragging) setPos(getPct(e.clientX)); });
   window.addEventListener('mouseup',   () => { dragging = false; });
 
-  /* Touch drag */
   slider.addEventListener('touchstart', e => { dragging = true; setPos(getPct(e.touches[0].clientX)); }, { passive: true });
   window.addEventListener('touchmove',  e => { if (dragging) setPos(getPct(e.touches[0].clientX)); }, { passive: true });
   window.addEventListener('touchend',   () => { dragging = false; });
@@ -1228,7 +1199,7 @@ const ZONE_WORDS = [
   'pons','jonzac','saujon','charente','17000','17100','17200','17300','17400',
   '17430','17600','17700','17800','aytré','perigny','angoulins','chatelaillon',
   'lagord','nieul','dompierre','rivedoux','la flotte','ars-en','dolus','fouras',
-  'saint-palais','vaux-sur-mer','medis','medis','yves','surgères'
+  'saint-palais','vaux-sur-mer','medis','yves','surgères'
 ];
 function checkZone() {
   const val = document.getElementById('zoneInp').value.toLowerCase().trim();
@@ -1309,7 +1280,6 @@ function sendForm(e) {
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params)
       .then(onSuccess)
       .catch(() => {
-        /* Fallback mailto */
         const body = encodeURIComponent(`Nom: ${nom}\nTél: ${tel}\nService: ${service}\nVille: ${ville}\nMessage: ${message}`);
         window.location.href = `mailto:gztoiture17@gmail.com?subject=Devis toiture - ${nom}&body=${body}`;
         onSuccess();
